@@ -25,7 +25,7 @@ def main():
     if len(sys.argv) == 3:
         dest_dir = sys.argv[2]
     else:
-        dest_dir = os.path.join(source_dir, "dist")
+        dest_dir = os.path.abspath("dist") 
 
     if not os.path.exists(dest_dir):
         os.makedirs(dest_dir)
